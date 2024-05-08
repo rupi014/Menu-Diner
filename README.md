@@ -1,3 +1,4 @@
+
 # Bottega Diner Ordering System
 
 Welcome to the Bottega Diner Ordering System! This system allows users to place orders for breakfast, lunch, or dinner items from the Bottega Diner menu.
@@ -14,9 +15,9 @@ Welcome to the Bottega Diner Ordering System! This system allows users to place 
 
 At the end of the code, there is a block that will allow us to select the menu based on the current time, and I have implemented this using the JavaScript global Date object.
 
-- **Breakfast Menu**: Available until 12:00.
-- **Lunch Menu**: Available from 12:00 PM to 17:00.
-- **Dinner Menu**: Available from 5:00 PM to 23:00.
+- **Breakfast Menu**: Available from 8:00 to 12:00.
+- **Lunch Menu**: Available from 12:00 to 17:00.
+- **Dinner Menu**: Available from 17:00 to 23:00.
 - **Closed**: The system displays a message if it's outside of business hours.
 
 This feature ensures that users are presented with the appropriate menu options based on the time of day.
@@ -35,16 +36,16 @@ The menu includes the following options:
 ### Breakfast
 
 -  **Entrees**: Eggs, Bacon
-	- **Extras**: Cheese, Bacon, Onion.
 -  **Sides**: Toast, Fruit, Croissant
 
 ### Lunch 
 - **Entrees**: Burger, Sandwich
-    - **Extras**: Tomato, Egg, Lettuce.
+	- **Extras**: Cheese, Bacon, Onion.
 - **Sides**: Fries, Salad, Chips
 
 ### Dinner
 - **Entrees**: Burger, Sandwich
+  	 - **Extras**: Tomato, Egg, Lettuce.
 - **Sides**: Fries, Salad, Chips
 
 *Dinner dishes have an extra cost of $2.*
@@ -60,4 +61,3 @@ This project is licensed under the [MIT License](LICENSE).
 ---
 
 Thank you for using the Bottega Diner Ordering System! Enjoy your meal!
-
