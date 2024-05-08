@@ -15,8 +15,8 @@ Welcome to the Bottega Diner Ordering System! This system allows users to place 
 At the end of the code, there is a block that will allow us to select the menu based on the current time, and I have implemented this using the JavaScript global Date object.
 
 - **Breakfast Menu**: Available until 12:00.
-- **Lunch Menu**: Available from 12:00 PM to 17:00.
-- **Dinner Menu**: Available from 5:00 PM to 23:00.
+- **Lunch Menu**: Available from 12:00 to 17:00.
+- **Dinner Menu**: Available from 17:00 to 23:00.
 - **Closed**: The system displays a message if it's outside of business hours.
 
 This feature ensures that users are presented with the appropriate menu options based on the time of day.
