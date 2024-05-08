@@ -35,16 +35,16 @@ The menu includes the following options:
 ### Breakfast
 
 -  **Entrees**: Eggs, Bacon
-	- **Extras**: Cheese, Bacon, Onion.
 -  **Sides**: Toast, Fruit, Croissant
 
 ### Lunch 
 - **Entrees**: Burger, Sandwich
-    - **Extras**: Tomato, Egg, Lettuce.
+	- **Extras**: Cheese, Bacon, Onion.
 - **Sides**: Fries, Salad, Chips
 
 ### Dinner
 - **Entrees**: Burger, Sandwich
+  	 - **Extras**: Tomato, Egg, Lettuce.
 - **Sides**: Fries, Salad, Chips
 
 *Dinner dishes have an extra cost of $2.*
