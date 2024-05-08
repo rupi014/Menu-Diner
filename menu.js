@@ -1,5 +1,4 @@
 // MENU COMPLETO
-
 const menu = {
     breakfast: {
         entrees: {
@@ -58,7 +57,6 @@ function userSelect() {
 }
 
 // FUNCION COMENTARIO ALEATORIO
-
 function generateComment() {
     const coment = [
         "Great choice!",
@@ -74,8 +72,6 @@ function generateComment() {
 
 
 // FUNCIONES PARA ELEGIR DESAYUNO
-
-
 function breakfastOrder() {
     alert(`
     BREAKFAST MENU:
@@ -119,7 +115,6 @@ function breakfastOrder() {
 
 
 // FUNCION PARA CALCULAR EL PRECIO TOTAL DEL DESAYUNO
-
 function totalBreakfast(entreeBreakfast, sideBreakfast1, sideBreakfast2) {
     let totalBF = 0;
     if (entreeBreakfast === "eggs") {
@@ -154,7 +149,6 @@ function totalBreakfast(entreeBreakfast, sideBreakfast1, sideBreakfast2) {
 }
 
 // FUNCION PARA ELEGIR ALMUERZO
-
 function lunchOrder() {
     alert(`
     LUNCH MENU:
@@ -200,8 +194,8 @@ function lunchOrder() {
     else {
         alert("You didn't add any extra ingredients.");
     }
-    
 
+    
     let sideLunch1 = prompt("What first side would you like to order? (Fries, Salad, or Chips)").toLowerCase();
     if (sideLunch1 !== "fries" && sideLunch1 !== "salad" && sideLunch1 !== "chips") {
         alert("Invalid input. Please try again.");
@@ -209,7 +203,7 @@ function lunchOrder() {
     }
     alert(`You ordered the ${sideLunch1}. ${generateComment()}. The price is $${menu.lunch.sides[sideLunch1].price}.`);
 
-
+    
     let sideLunch2 = prompt("What second side would you like to order? (Fries, Salad, or Chips)").toLowerCase();
     if (sideLunch1 === sideLunch2) {
         alert("You can't repeat the same side. Please try again.");
@@ -220,11 +214,11 @@ function lunchOrder() {
     }
     alert(`You ordered the ${sideLunch2}. ${generateComment()}. The price is $${menu.lunch.sides[sideLunch2].price}.`);
 
+    
     totalLunch(entreeLunch, sideLunch1, sideLunch2, extra, extraCost);
 }
 
 // FUNCION PARA CALCULAR EL PRECIO TOTAL DEL ALMUERZO
-
 function totalLunch(entreeLunch, sideLunch1, sideLunch2, extra, extraCost) {
     let totalLN = 0;
     let entreePrice = 0;
@@ -270,7 +264,6 @@ function totalLunch(entreeLunch, sideLunch1, sideLunch2, extra, extraCost) {
 
 
 // FUNCION PARA ELEGIR CENA
-
 function dinnerOrder() {
     alert(`
     DINNER MENU:
@@ -337,13 +330,11 @@ function dinnerOrder() {
     }
     alert(`You ordered the ${sideDinner2}. ${generateComment()}. The price is $${menu.dinner.sides[sideDinner2].price}.`);
 
-
     
     totalDinner(entreeDinner, sideDinner1, sideDinner2, extra, extraCost);
 }
 
 // FUNCION PARA CALCULAR EL PRECIO TOTAL DE LA CENA
-
 function totalDinner(entreeDinner, sideDinner1, sideDinner2, extra, extraCost) {
     let totalDN = 0;
     let entreePrice = 0;
@@ -387,7 +378,8 @@ function totalDinner(entreeDinner, sideDinner1, sideDinner2, extra, extraCost) {
 
 
 
-// EJECUTAR EL SCRIPT
+// EJECUTAR EL SCRIPT (COMENTAR ESTE BLOQUE Y DESCOMENTAR EL SIGUIETE)
+// PARA PODER USAR EL METODO DE MENU SEGUN LA HORA DEL DIA
 
 alert("Welcome to Bottega Diner!");
 let menuStr = `
