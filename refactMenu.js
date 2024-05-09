@@ -92,7 +92,7 @@ function orderMeal(meal) {
     TOTAL: $${mealMenu.entrees[entree].price + mealMenu.sides[side1].price + mealMenu.sides[side2].price}.`);
 }
 
-// METODO PARA EJECUTAR EL SCRIPT
+// METODO PARA EJECUTAR EL SCRIPT DE FORMA NORMAL
 
 alert("Welcome to Bottega Diner!");
 let ask = prompt("\n\nDo you want to order something? (Yes, No)").toLowerCase();
