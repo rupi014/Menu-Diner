@@ -115,24 +115,24 @@ alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
 
 //METODO PARA ASIGNAR EL MENU EN FUNCION DE LA HORA ACTUAL A LA QUE SE EJECUTE EL SCRIPT
 
-alert("Welcome to Bottega Diner!");
+// alert("Welcome to Bottega Diner!");
 
-let date = new Date();                                                       // FECHA ACTUAL DONDE SE REGISTRA LA HORA                                                              
-if (date.getHours() >=8 && date.getHours() < 12) {                           // SI LA HORA ES MAYOR O IGUAL A 8 Y MENOR A 12, SE PUEDE PEDIR DESAYUNO
-    alert("You can order breakfast until 12:00.");
-    let meal = "breakfast";
-    orderMeal(meal);
-    alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
-} else if (date.getHours() >= 12 && date.getHours() < 17) {                  // SI LA HORA ES MAYOR O IGUAL A 12 Y MENOR A 17, SE PUEDE PEDIR ALMUERZO
-    alert("You can order lunch until 17:00.");
-    let meal = "lunch"; 
-    orderMeal(meal);
-    alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
-} else if (date.getHours() >= 17 && date.getHours() <= 23) {                  // SI LA HORA ES MAYOR O IGUAL A 17 Y MENOR O IGUAL A 23, SE PUEDE PEDIR CENA
-    alert("You can order dinner until 23:00.");
-    let meal = "dinner";
-    orderMeal(meal);
-    alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
-} else {                                                                      // SI LA HORA NO ESTA EN NINGUNO DE LOS RANGOS ANTERIORES, MUESTRA UN MENSAJE DE QUE ESTAN CERRADOS
-  alert("We are closed now. Please come back tomorrow.")
-}
+// let date = new Date();                                                       // FECHA ACTUAL DONDE SE REGISTRA LA HORA                                                              
+// if (date.getHours() >=8 && date.getHours() < 12) {                           // SI LA HORA ES MAYOR O IGUAL A 8 Y MENOR A 12, SE PUEDE PEDIR DESAYUNO
+//     alert("You can order breakfast until 12:00.");
+//     let meal = "breakfast";
+//     orderMeal(meal);
+//     alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
+// } else if (date.getHours() >= 12 && date.getHours() < 17) {                  // SI LA HORA ES MAYOR O IGUAL A 12 Y MENOR A 17, SE PUEDE PEDIR ALMUERZO
+//     alert("You can order lunch until 17:00.");
+//     let meal = "lunch"; 
+//     orderMeal(meal);
+//     alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
+// } else if (date.getHours() >= 17 && date.getHours() <= 23) {                  // SI LA HORA ES MAYOR O IGUAL A 17 Y MENOR O IGUAL A 23, SE PUEDE PEDIR CENA
+//     alert("You can order dinner until 23:00.");
+//     let meal = "dinner";
+//     orderMeal(meal);
+//     alert("Hope you enjoyed your meal! Come back soon to Bottega Diner!");
+// } else {                                                                      // SI LA HORA NO ESTA EN NINGUNO DE LOS RANGOS ANTERIORES, MUESTRA UN MENSAJE DE QUE ESTAN CERRADOS
+//   alert("We are closed now. Please come back tomorrow.")
+// }
