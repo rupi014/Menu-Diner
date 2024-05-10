@@ -41,7 +41,7 @@ function mealTime(meal) {
         createBill(meal, entree, side1, side2, extraIng);
     }
 
-    
+
 // FUNCION PARA GENERAR COMENTARIOS ALEATORIOS
 function generateComment() {
     const comments = ["Great choice!", "Good choice!", "Excellent choice!", "You're going to love it!", "You're going to enjoy it!", "You're going to like it!"];
