@@ -1,11 +1,17 @@
 // MENU
 
 const menu = {
-    breakfast: { entrees: { eggs: { name: 'Eggs', price: 6 }, bacon: { name: 'Bacon', price: 5 } }, sides: { toast: { name: 'Toast', price: 2 }, fruit: { name: 'Fruit', price: 3 }, croissant: { name: 'Croissant', price: 4 } } }, 
+    breakfast: { 
+        entrees: { eggs: { name: 'Eggs', price: 6 }, bacon: { name: 'Bacon', price: 5 } }, 
+        sides: { toast: { name: 'Toast', price: 2 }, fruit: { name: 'Fruit', price: 3 }, croissant: { name: 'Croissant', price: 4 } } }, 
     
-    lunch: { entrees: { burger: { name: 'Burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 } } }, 
+    lunch: { 
+        entrees: { burger: { name: 'Burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
+        sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 } } }, 
 
-    dinner: { entrees: { burger: { name: 'Burger', price: 12 }, sandwich: { name: 'Sandwich', price: 10 } }, sides: { fries: { name: 'Fries', price: 5 }, salad: { name: 'Salad', price: 6 }, chips: { name: 'Chips', price: 4 } } } };
+    dinner: { 
+        entrees: { burger: { name: 'Burger', price: 12 }, sandwich: { name: 'Sandwich', price: 10 } }, 
+        sides: { fries: { name: 'Fries', price: 5 }, salad: { name: 'Salad', price: 6 }, chips: { name: 'Chips', price: 4 } } } };
 
 
 // INGREDIENTES EXTRA
