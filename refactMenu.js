@@ -6,11 +6,11 @@ const menu = {
     }, 
     lunch: { 
         entrees: { burger: { name: 'Burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
-        sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 }, none: { name: 'none', price: 0 } } 
+        sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 }, none: { name: 'None', price: 0 } } 
     }, 
     dinner: { 
         entrees: { burger: { name: 'Burger', price: 12 }, sandwich: { name: 'Sandwich', price: 10 } }, 
-        sides: { fries: { name: 'Fries', price: 5 }, salad: { name: 'Salad', price: 6 }, chips: { name: 'Chips', price: 4 }, none: { name: 'none', price: 0 } } 
+        sides: { fries: { name: 'Fries', price: 5 }, salad: { name: 'Salad', price: 6 }, chips: { name: 'Chips', price: 4 }, none: { name: 'None', price: 0 } } 
     }
 };
 
