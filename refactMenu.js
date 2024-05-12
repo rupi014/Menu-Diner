@@ -65,7 +65,7 @@ Sides:
 ${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}
 `);
         let entreeIndex = parseInt(prompt(`
-What entree would you like to order?\n${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}`)) - 1;
+What entree would you like to order? (enter a number)\n${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}`)) - 1;
     if (isNaN(entreeIndex) || entreeIndex < 0 || entreeIndex >= entreeKeys.length) {                                                                   
         alert("Invalid input. Please try again.");                                                        
         return orderMeal(meal);
@@ -80,7 +80,7 @@ What entree would you like to order?\n${entreeKeys.map((key, index) => `${index 
 function orderExtraIngredient() {
     const extraKeys = Object.keys(extraIngredients);  
     let extraIndex = parseInt(prompt(`
-What extra ingredient would you like to add?\n${extraKeys.map((key, index) => `${index + 1}. ${extraIngredients[key].name} - $${extraIngredients[key].price}`).join("\n")}`)) - 1;
+What extra ingredient would you like to add? (enter a number)\n${extraKeys.map((key, index) => `${index + 1}. ${extraIngredients[key].name} - $${extraIngredients[key].price}`).join("\n")}`)) - 1;
     if (isNaN(extraIndex) || extraIndex < 0 || extraIndex >= extraKeys.length) {
         alert("Invalid input. Please try again.");
         return orderExtraIngredient();
@@ -100,7 +100,7 @@ function orderSide1(meal) {
     const mealMenu = menu[meal];
     const sidesKeys = Object.keys(mealMenu.sides);
     let sideIndex = parseInt(prompt(`
-What first side would you like to order? \n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1; 
+What first side would you like to order? (enter a number)\n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1; 
     if (isNaN(sideIndex) || sideIndex < 0 || sideIndex >= sidesKeys.length) {                                                                        
         alert("Invalid input. Please try again.");
         return orderSide1(meal);
@@ -120,7 +120,7 @@ function orderSide2(meal) {
     const mealMenu = menu[meal];
     const sidesKeys = Object.keys(mealMenu.sides);  
     let sideIndex = parseInt(prompt(`
-What second side would you like to order? \n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1;   
+What second side would you like to order? (enter a number)\n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1;   
     if (isNaN(sideIndex) || sideIndex < 0 || sideIndex >= sidesKeys.length) {
         alert("Invalid input. Please try again.");
         return orderSide2(meal);
