@@ -5,7 +5,7 @@ const menu = {
         sides: { toast: { name: 'Toast', price: 2 }, fruit: { name: 'Fruit', price: 3 }, croissant: { name: 'Croissant', price: 4 }, none: { name: 'None', price: 0 } } 
     }, 
     lunch: { 
-        entrees: { burger: { name: 'Burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
+        entrees: { burger: { name: 'burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
         sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 }, none: { name: 'None', price: 0 } } 
     }, 
     dinner: { 
@@ -56,34 +56,36 @@ function orderMeal(meal) {
     const sidesKeys = Object.keys(mealMenu.sides);
 
     alert(`
-        ${meal.toUpperCase()} MENU:
-        ---------------
-        Entrees:
-        ${entreeKeys.map(key => `${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join(", ")}
+${meal.toUpperCase()} MENU:
+---------------
+Entrees:
+${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}
          
-        Sides:
-        ${sidesKeys.map(key => `${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join(", ")}
-    `);
-
-    let entree = prompt(`What entree would you like to order? (${entreeKeys.join(", ")})`).toLowerCase(); 
-    if (!entreeKeys.includes(entree)) {                                                                   
+Sides:
+${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}
+`);
+        let entreeIndex = parseInt(prompt(`
+What entree would you like to order?\n${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}`)) - 1;
+    if (isNaN(entreeIndex) || entreeIndex < 0 || entreeIndex >= entreeKeys.length) {                                                                   
         alert("Invalid input. Please try again.");                                                        
-        return orderEntree(meal);
-    } else if (entreeKeys.includes(entree)) {
+        return orderMeal(meal);
+    } else {
+        let entree = entreeKeys[entreeIndex];
         alert(`You ordered ${mealMenu.entrees[entree].name}. ${generateComment()}. The price is $${mealMenu.entrees[entree].price}.`);
         return entree;
-   
     }
 }
 
 // FUNCION PARA PEDIR EL EXTRA
 function orderExtraIngredient() {
     const extraKeys = Object.keys(extraIngredients);  
-    let extraIng = prompt(`What extra ingredient would you like to add? (${extraKeys.join(", ")})`).toLowerCase();
-    if (!extraKeys.includes(extraIng)) {
+    let extraIndex = parseInt(prompt(`
+What extra ingredient would you like to add?\n${extraKeys.map((key, index) => `${index + 1}. ${extraIngredients[key].name} - $${extraIngredients[key].price}`).join("\n")}`)) - 1;
+    if (isNaN(extraIndex) || extraIndex < 0 || extraIndex >= extraKeys.length) {
         alert("Invalid input. Please try again.");
         return orderExtraIngredient();
-    } else if (extraKeys.includes(extraIng)) {
+    } else {
+        let extraIng = extraKeys[extraIndex];
         if (extraIng === "none") {
             alert("You haven't selected an extra ingredient.");
         } else {
@@ -97,11 +99,13 @@ function orderExtraIngredient() {
 function orderSide1(meal) {
     const mealMenu = menu[meal];
     const sidesKeys = Object.keys(mealMenu.sides);
-    let side1 = prompt(`What first side would you like to order? (${sidesKeys.join(", ")})`).toLowerCase();  
-    if (!sidesKeys.includes(side1)) {                                                                        
+    let sideIndex = parseInt(prompt(`
+What first side would you like to order? \n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1; 
+    if (isNaN(sideIndex) || sideIndex < 0 || sideIndex >= sidesKeys.length) {                                                                        
         alert("Invalid input. Please try again.");
         return orderSide1(meal);
     } else {
+        let side1 = sidesKeys[sideIndex];
         if (side1 === "none") {
             alert("You haven't selected a first side.");
         } else {
@@ -115,11 +119,13 @@ function orderSide1(meal) {
 function orderSide2(meal) {
     const mealMenu = menu[meal];
     const sidesKeys = Object.keys(mealMenu.sides);  
-    let side2 = prompt(`What second side would you like to order? (${sidesKeys.join(", ")})`).toLowerCase();  
-    if (!sidesKeys.includes(side2)) {
+    let sideIndex = parseInt(prompt(`
+What second side would you like to order? \n${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}`)) - 1;   
+    if (isNaN(sideIndex) || sideIndex < 0 || sideIndex >= sidesKeys.length) {
         alert("Invalid input. Please try again.");
         return orderSide2(meal);
     } else {
+        let side2 = sidesKeys[sideIndex];
         if (side2 === "none") {
             alert("You haven't selected a second side.");
         } else {
