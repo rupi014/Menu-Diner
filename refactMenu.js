@@ -17,29 +17,30 @@ const menu = {
 // INGREDIENTES EXTRA
 const extraIngredients = { cheese: { name: 'Cheese', price: 2 }, bacon: { name: 'Bacon', price: 3 }, onion: { name: 'Onion', price: 1 }, none: { name: 'None', price: 0 }};
 
-// FUNCION PARA ELEGIR MENU MANUALMENTE
+// FUNCION GENERAL PARA PEDIR Y CREAR FACTURA
+function orderAndCreateBill(meal) {
+    const entree = orderMeal(meal);
+    const extraIng = orderExtraIngredient();
+    const side1 = orderSide1(meal);
+    const side2 = orderSide2(meal);
+    createBill(meal, entree, side1, side2, extraIng);
+}
+
+// FUNCION PARA PEDIR MENU MANUALMENTE
 function userSelect() {
-    let meal = prompt("What would you like to order? (Breakfast, Lunch, or Dinner)").toLowerCase();
-    if (["breakfast", "lunch", "dinner"].includes(meal)) {                                             
-        let entree = orderMeal(meal);
-        let extraIng = orderExtraIngredient();
-        let side1 = orderSide1(meal);
-        let side2 = orderSide2(meal);
-        createBill(meal, entree, side1, side2, extraIng);
+    const meal = prompt("What would you like to order? (Breakfast, Lunch, or Dinner)").toLowerCase();
+    if (["breakfast", "lunch", "dinner"].includes(meal)) {
+        orderAndCreateBill(meal);
     } else {
         alert("Invalid input. Please try again.");
         userSelect();
     }
 }
 
-// FUNCION PARA ELEGIR MENU SEGUN LA HORA DEL DIA
+// FUNCION PARA PEDIR MENU SEGUN LA HORA DEL DIA
 function mealTime(meal) {
-        let entree = orderMeal(meal);
-        let extraIng = orderExtraIngredient();
-        let side1 = orderSide1(meal);
-        let side2 = orderSide2(meal);
-        createBill(meal, entree, side1, side2, extraIng);
-    }
+    orderAndCreateBill(meal);
+}
 
 
 // FUNCION PARA GENERAR COMENTARIOS ALEATORIOS
@@ -48,7 +49,7 @@ function generateComment() {
     return comments[Math.floor(Math.random() * comments.length)];
 }
 
-// FUNCION COMIDA
+// FUNCION PARA PEDIR EL ENTREE
 function orderMeal(meal) {
     const mealMenu = menu[meal];                      
     const entreeKeys = Object.keys(mealMenu.entrees); 
@@ -75,7 +76,7 @@ function orderMeal(meal) {
     }
 }
 
-// FUNCION EXTRA
+// FUNCION PARA PEDIR EL EXTRA
 function orderExtraIngredient() {
     const extraKeys = Object.keys(extraIngredients);  
     let extraIng = prompt(`What extra ingredient would you like to add? (${extraKeys.join(", ")})`).toLowerCase();
@@ -128,7 +129,7 @@ function orderSide2(meal) {
     }
 }
 
-// FUNCION PARA CREAR FACTURA SEGUN LO PEDIDO POR EL USUARIO
+// FUNCION PARA CREAR FACTURA
 function createBill(meal, entree, side1, side2, extraIng) {
     const mealMenu = menu[meal];                      
     let bill = `BILL\n-----`
@@ -145,7 +146,7 @@ function createBill(meal, entree, side1, side2, extraIng) {
     alert(bill);
 }
 
-//METODO PARA ELEGIR MENU SEGUN LA HORA DEL DIA
+// EJECUCION DEL SCRIPT
 let sistem_hour = true; // Cambiar a false para probar el menu manualmente
 let date = new Date();
 if (sistem_hour) {
