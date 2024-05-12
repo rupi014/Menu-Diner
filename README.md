@@ -6,6 +6,7 @@ Welcome to the Bottega Diner Ordering System! This system allows users to place 
 ## Features
 
 - **Ordering**: Users can select from a variety of breakfast, lunch, and dinner options.
+- **Numerical Selection**: Users can choose dishes using numbers to facilitate script usage.
 - **Random Comments**: Users receive random comments about their choices to enhance the user experience.
 - **Error Handling**: The system handles invalid inputs gracefully, prompting users to re-enter their choices.
 - **Customization Options**: Users can add extra ingredients to their orders, such as cheese, bacon, or lettuce.
