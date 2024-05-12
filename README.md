@@ -13,7 +13,7 @@ Welcome to the Bottega Diner Ordering System! This system allows users to place 
 
 ## Time-Based Menu Selection
 
-At the end of the code, there is a block that will allow us to select the menu based on the current time, and I have implemented this using the JavaScript global Date object.
+At the end of the code, you can change the variable "sistem-hour" to true to select the menu based on the real time.
 
 - **Breakfast Menu**: Available from 8:00 to 12:00.
 - **Lunch Menu**: Available from 12:00 to 17:00.
