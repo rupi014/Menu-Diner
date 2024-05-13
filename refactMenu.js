@@ -5,7 +5,7 @@ const menu = {
         sides: { toast: { name: 'Toast', price: 2 }, fruit: { name: 'Fruit', price: 3 }, croissant: { name: 'Croissant', price: 4 }, none: { name: 'None', price: 0 } } 
     }, 
     lunch: { 
-        entrees: { burger: { name: 'burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
+        entrees: { burger: { name: 'Burger', price: 10 }, sandwich: { name: 'Sandwich', price: 8 } }, 
         sides: { fries: { name: 'Fries', price: 3 }, salad: { name: 'Salad', price: 4 }, chips: { name: 'Chips', price: 2 }, none: { name: 'None', price: 0 } } 
     }, 
     dinner: { 
@@ -19,6 +19,7 @@ const extraIngredients = { cheese: { name: 'Cheese', price: 2 }, bacon: { name: 
 
 // FUNCION GENERAL PARA PEDIR Y CREAR FACTURA
 function orderAndCreateBill(meal) {
+    showMenu(meal);
     const entree = orderMeal(meal);
     const extraIng = orderExtraIngredient();
     const side1 = orderSide1(meal);
@@ -49,8 +50,8 @@ function generateComment() {
     return comments[Math.floor(Math.random() * comments.length)];
 }
 
-// FUNCION PARA PEDIR EL ENTREE
-function orderMeal(meal) {
+// FUNNCION PARA MOSTRAR EL MENU
+function showMenu(meal) {
     const mealMenu = menu[meal];                      
     const entreeKeys = Object.keys(mealMenu.entrees); 
     const sidesKeys = Object.keys(mealMenu.sides);
@@ -60,10 +61,18 @@ ${meal.toUpperCase()} MENU:
 ---------------
 Entrees:
 ${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}
-         
+             
 Sides:
 ${sidesKeys.map((key, index) => `${index + 1}. ${mealMenu.sides[key].name} - $${mealMenu.sides[key].price}`).join("\n")}
-`);
+`)
+}
+
+// FUNCION PARA PEDIR EL ENTREE
+function orderMeal(meal) {
+    const mealMenu = menu[meal];                      
+    const entreeKeys = Object.keys(mealMenu.entrees); 
+    const sidesKeys = Object.keys(mealMenu.sides);
+
         let entreeIndex = parseInt(prompt(`
 What entree would you like to order? (enter a number)\n${entreeKeys.map((key, index) => `${index + 1}. ${mealMenu.entrees[key].name} - $${mealMenu.entrees[key].price}`).join("\n")}`)) - 1;
     if (isNaN(entreeIndex) || entreeIndex < 0 || entreeIndex >= entreeKeys.length) {                                                                   
